@@ -2,7 +2,7 @@
 using System.Timers;
 using System.Drawing;
 
-namespace Lab1
+namespace MeditationTimerApp
 {
     public partial class RelaxTimer : Form
     {

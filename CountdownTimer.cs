@@ -1,6 +1,6 @@
 ﻿using System.Timers;
 
-namespace Lab1
+namespace MeditationTimerApp
 {
     public partial class CountdownTimer : Form
     {
