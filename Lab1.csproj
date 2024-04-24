@@ -9,4 +9,9 @@
     <StartupObject>Lab1.Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="HIC.System.Windows.Forms.DataVisualization" Version="1.0.1" />
+    <PackageReference Include="LiveCharts" Version="0.9.7" />
+  </ItemGroup>
+
 </Project>
