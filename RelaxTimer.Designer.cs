@@ -1,6 +1,6 @@
 ﻿namespace Lab1
 {
-    partial class Timer
+    partial class RelaxTimer
     {
         /// <summary>
         /// Required designer variable.
