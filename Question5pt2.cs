@@ -28,7 +28,11 @@ namespace Lab1
             timer.Interval = 1000; 
             timer.AutoReset = true;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TimerElapsed(object? sender, ElapsedEventArgs e)
         {
             if (totalTimeInSeconds > 0)
