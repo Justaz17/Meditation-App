@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <StartupObject>Lab1.Program</StartupObject>
+    <StartupObject>MeditationTimerApp.Program</StartupObject>
   </PropertyGroup>
 
 </Project>

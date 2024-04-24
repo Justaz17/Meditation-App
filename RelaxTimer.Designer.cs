@@ -1,4 +1,4 @@
-﻿namespace Lab1
+﻿namespace MeditationTimerApp
 {
     partial class RelaxTimer
     {
@@ -36,6 +36,7 @@
             countdownBtn = new Button();
             timerLabel = new Label();
             exitBtn = new Button();
+            dropdownForMusic = new ComboBox();
             SuspendLayout();
             // 
             // Timer
@@ -124,12 +125,25 @@
             exitBtn.UseVisualStyleBackColor = false;
             exitBtn.Click += exitBtn_Click;
             // 
-            // Question5
+            // dropdownForMusic
+            // 
+            dropdownForMusic.BackColor = Color.White;
+            dropdownForMusic.DropDownStyle = ComboBoxStyle.DropDownList;
+            dropdownForMusic.FormattingEnabled = true;
+            dropdownForMusic.Items.AddRange(new object[] { "AmbientSound1", "AmbientSound2", "AmbientSound3", "AmbientSound4", "AmbientSound5" });
+            dropdownForMusic.Location = new Point(582, 83);
+            dropdownForMusic.Name = "dropdownForMusic";
+            dropdownForMusic.Size = new Size(151, 28);
+            dropdownForMusic.TabIndex = 6;
+            dropdownForMusic.SelectedIndexChanged += dropdownForMusic_SelectedIndexChanged;
+            // 
+            // RelaxTimer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 38, 48);
             ClientSize = new Size(786, 350);
+            Controls.Add(dropdownForMusic);
             Controls.Add(exitBtn);
             Controls.Add(timerLabel);
             Controls.Add(countdownBtn);
@@ -137,7 +151,7 @@
             Controls.Add(stopBtn);
             Controls.Add(startBtn);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Question5";
+            Name = "RelaxTimer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Stopwatch";
             Load += Question5_Load;
@@ -154,5 +168,6 @@
         private Button countdownBtn;
         private Label timerLabel;
         private Button exitBtn;
+        private ComboBox dropdownForMusic;
     }
 }

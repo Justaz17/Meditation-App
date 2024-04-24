@@ -1,25 +1,41 @@
 ﻿using System.Media;
-using System.Reflection.Metadata.Ecma335;
 using System.Timers;
-namespace Lab1
+using System.Drawing;
+
+namespace MeditationTimerApp
 {
     public partial class RelaxTimer : Form
     {
         System.Timers.Timer timer;
         int hours, minutes, seconds;
-        SoundPlayer musicPlayer;
+        readonly SoundPlayer musicPlayer = new SoundPlayer();
+
+        public RelaxTimer()
+        {
+            InitializeComponent();
+            dropdownForMusic.SelectedIndex = 0;
+        }
+
+
         private void startBtn_Click(object sender, EventArgs e)
         {
             timer.Start();
-            if (timerLabel.Text == "00:00")
+            string selectedMusicFile = dropdownForMusic.SelectedIndex switch
             {
-                musicPlayer = new SoundPlayer();
-                PlayMusic("thinking.wav");
+                0 => "thinking.wav",
+                1 => "tune1.wav",
+                2 => "tune2.wav",
+                3 => "tune3.wav",
+                4 => "tune4.wav",
+                5 => "tune5.wav",
+                _ => null // Default case if no other matches are found
+            };
+
+            if (selectedMusicFile != null)
+            {
+                PlayMusic(selectedMusicFile);
             }
-            else { 
-            
-            continueMusic();
-            }
+
 
         }
         public void PlayMusic(string filepath)
@@ -50,10 +66,10 @@ namespace Lab1
             hours = 0;
             minutes = 0;
             timerLabel.Text = "00:00";
-            
+
         }
 
-       public void writeTimeToFile()
+        public void writeTimeToFile()
         {
             string path = "timeSpentMeditating.txt";
             using (StreamWriter sw = File.AppendText(path))
@@ -78,10 +94,7 @@ namespace Lab1
         {
 
         }
-        public RelaxTimer()
-        {
-            InitializeComponent();
-        }
+
 
 
         private void Question5_Load(object sender, EventArgs e)
@@ -111,6 +124,10 @@ namespace Lab1
 
 
             }));
+        }
+
+        private void dropdownForMusic_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }
