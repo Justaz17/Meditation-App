@@ -51,11 +51,13 @@ namespace Lab1
         {
 
         }
-
+        /// <summary>
+        /// 
         public Question5()
         {
             InitializeComponent();
         }
+
 
         private void Question5_Load(object sender, EventArgs e)
         {
