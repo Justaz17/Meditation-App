@@ -3,7 +3,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Timers;
 namespace Lab1
 {
-    public partial class Timer : Form
+    public partial class RelaxTimer : Form
     {
         System.Timers.Timer timer;
         int hours, minutes, seconds;
@@ -70,7 +70,7 @@ namespace Lab1
 
         private void countdownBtn_Click(object sender, EventArgs e)
         {
-            var newform = new Question5pt2();
+            var newform = new CountdownTimer();
             newform.Show();
         }
 
@@ -78,7 +78,7 @@ namespace Lab1
         {
 
         }
-        public Timer()
+        public RelaxTimer()
         {
             InitializeComponent();
         }
