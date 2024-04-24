@@ -43,7 +43,7 @@ namespace Lab1
 
         private void countdownBtn_Click(object sender, EventArgs e)
         {
-            var newform = new Question5pt2();
+            var newform = new CountdownTimer();
             newform.Show();
         }
 
