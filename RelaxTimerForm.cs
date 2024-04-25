@@ -4,13 +4,13 @@ using System.Drawing;
 
 namespace MeditationTimerApp
 {
-    public partial class RelaxTimer : Form
+    public partial class RelaxTimerForm : Form
     {
         System.Timers.Timer timer;
         int hours, minutes, seconds;
         private readonly MySoundPlayer player;
 
-        public RelaxTimer()
+        public RelaxTimerForm()
         {
             InitializeComponent();
             dropdownForMusic.SelectedIndex = 4;
@@ -67,7 +67,7 @@ namespace MeditationTimerApp
 
         private void countdownBtn_Click(object sender, EventArgs e)
         {
-            var newform = new CountdownTimer();
+            var newform = new CountdownTimerForm();
             newform.Show();
         }
 

@@ -4,14 +4,14 @@ using System.Timers;
 
 namespace MeditationTimerApp
 {
-    public partial class CountdownTimer : Form
+    public partial class CountdownTimerForm : Form
     {
         private System.Timers.Timer timer;
         private int totalTimeInSeconds;
         private int sessionSeconds;
          readonly MySoundPlayer musicPlayer = new MySoundPlayer();
 
-        public CountdownTimer()
+        public CountdownTimerForm()
         {
             InitializeComponent();
             InitializeTimer();
