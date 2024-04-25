@@ -1,4 +1,4 @@
-# Meditaion App
+# Mediation App
 
 By Justas Jokubauskas and Adam Carr
 
