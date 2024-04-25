@@ -8,54 +8,35 @@ namespace MeditationTimerApp
     {
         System.Timers.Timer timer;
         int hours, minutes, seconds;
-        readonly SoundPlayer musicPlayer = new SoundPlayer();
+        private readonly MySoundPlayer player;
 
         public RelaxTimer()
         {
             InitializeComponent();
-            dropdownForMusic.SelectedIndex = 0;
+            dropdownForMusic.SelectedIndex = 4;
+            player = new MySoundPlayer();
         }
 
 
         private void startBtn_Click(object sender, EventArgs e)
         {
             timer.Start();
-            string selectedMusicFile = dropdownForMusic.SelectedIndex switch
-            {
-                0 => "thinking.wav",
-                1 => "tune1.wav",
-                2 => "tune2.wav",
-                3 => "tune3.wav",
-                4 => "tune4.wav",
-                5 => "tune5.wav",
-                _ => null // Default case if no other matches are found
-            };
+            string selectedMusicFile = Program.PickMusicFile(dropdownForMusic.SelectedIndex);
 
             if (selectedMusicFile != null)
             {
-                PlayMusic(selectedMusicFile);
+                player.PlayMusic(selectedMusicFile);
             }
 
 
         }
-        public void PlayMusic(string filepath)
-        {
-            musicPlayer.SoundLocation = filepath;
-            musicPlayer.PlayLooping();
-        }
 
-        public void continueMusic()
-        {
-            musicPlayer.Play();
-        }
-        public void StopMusic()
-        {
-            musicPlayer.Stop();
-        }
+
+
         private void stopBtn_Click(object sender, EventArgs e)
         {
             timer.Stop();
-            StopMusic();
+            player.StopMusic();
 
         }
 
@@ -103,7 +84,7 @@ namespace MeditationTimerApp
             timer.Interval = 1;
             timer.Elapsed += OnTimeEvent;
         }
-        //test comment
+
         private void OnTimeEvent(object? sender, ElapsedEventArgs e)
         {
             Invoke(new Action(() =>
