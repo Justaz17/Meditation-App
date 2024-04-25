@@ -1,6 +1,6 @@
 ﻿namespace MeditationTimerApp
 {
-    partial class RelaxTimer
+    partial class RelaxTimerForm
     {
         /// <summary>
         /// Required designer variable.

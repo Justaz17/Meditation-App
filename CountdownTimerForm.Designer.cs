@@ -1,6 +1,6 @@
 ﻿namespace MeditationTimerApp
 {
-    partial class CountdownTimer
+    partial class CountdownTimerForm
     {
         /// <summary>
         /// Required designer variable.
