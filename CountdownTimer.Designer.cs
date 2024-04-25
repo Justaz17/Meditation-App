@@ -42,6 +42,7 @@
             label1 = new Label();
             radioButton4 = new RadioButton();
             numericUpDown1 = new NumericUpDown();
+            musicDropDown = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -60,6 +61,7 @@
             // 
             // selectBox
             // 
+            selectBox.DropDownStyle = ComboBoxStyle.DropDownList;
             selectBox.FormattingEnabled = true;
             selectBox.Items.AddRange(new object[] { "Seconds", "Minutes" });
             selectBox.Location = new Point(180, 93);
@@ -212,12 +214,23 @@
             numericUpDown1.Size = new Size(150, 24);
             numericUpDown1.TabIndex = 16;
             // 
-            // Question5pt2
+            // musicDropDown
+            // 
+            musicDropDown.DropDownStyle = ComboBoxStyle.DropDownList;
+            musicDropDown.FormattingEnabled = true;
+            musicDropDown.Items.AddRange(new object[] { "Piano1", "Piano2", "Piano3", "Piano4", "AmbientSound" });
+            musicDropDown.Location = new Point(772, 61);
+            musicDropDown.Name = "musicDropDown";
+            musicDropDown.Size = new Size(151, 26);
+            musicDropDown.TabIndex = 17;
+            // 
+            // CountdownTimer
             // 
             AutoScaleDimensions = new SizeF(10F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateGray;
             ClientSize = new Size(1000, 405);
+            Controls.Add(musicDropDown);
             Controls.Add(numericUpDown1);
             Controls.Add(radioButton4);
             Controls.Add(label1);
@@ -235,7 +248,7 @@
             Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "Question5pt2";
+            Name = "CountdownTimer";
             Text = "Countdown";
             Load += Question5pt2_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
@@ -259,5 +272,6 @@
         private Label label1;
         private RadioButton radioButton4;
         private NumericUpDown numericUpDown1;
+        private ComboBox musicDropDown;
     }
 }

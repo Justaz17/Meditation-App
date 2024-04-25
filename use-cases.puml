@@ -1,0 +1,17 @@
+@startuml MeditationAppUseCase
+
+skinparam actorStyle awesome
+left to right direction
+
+"User" as user
+"Start Timer & Play Music" as (startTimerPlayMusic)
+"Stop Timer & Stop Music" as (stopTimerStopMusic)
+"Play Music" as (playMusic)
+
+(stopTimerStopMusic) --> (playMusic) : <<include>>
+(startTimerPlayMusic) --> (playMusic) : <<include>>
+
+user --> (startTimerPlayMusic) : starts
+user --> (stopTimerStopMusic) : stops
+
+@enduml

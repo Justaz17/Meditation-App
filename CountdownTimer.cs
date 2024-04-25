@@ -1,4 +1,6 @@
-﻿using System.Timers;
+﻿using System.Media;
+using System.Numerics;
+using System.Timers;
 
 namespace MeditationTimerApp
 {
@@ -7,11 +9,16 @@ namespace MeditationTimerApp
         private System.Timers.Timer timer;
         private int totalTimeInSeconds;
         private int sessionSeconds;
+         readonly MySoundPlayer musicPlayer = new MySoundPlayer();
+
         public CountdownTimer()
         {
             InitializeComponent();
             InitializeTimer();
-            
+            selectBox.SelectedIndex = 1;
+            musicDropDown.SelectedIndex = 4;
+
+
         }
 
         private void InitializeTimer()
@@ -37,7 +44,7 @@ namespace MeditationTimerApp
             {
 
                 timer.Stop();
-
+                musicPlayer.StopMusic();
                 timerLabel.Invoke(new Action(() => timerLabel.Text = " Zen over"));
 
                 int minutes = totalTimeInSeconds / 60;
@@ -72,6 +79,7 @@ namespace MeditationTimerApp
         private void stopBtn_Click(object sender, EventArgs e)
         {
             timer.Stop();
+            musicPlayer.StopMusic();
         }
 
         private void startBtn_Click(object sender, EventArgs e)
@@ -87,6 +95,11 @@ namespace MeditationTimerApp
             sessionSeconds = totalTimeInSeconds;
 
             timer.Start();
+            string selectedMusicFile = Program.PickMusicFile(musicDropDown.SelectedIndex);
+            if (selectedMusicFile != null)
+            {
+                musicPlayer.PlayMusic(selectedMusicFile);
+            }
         }
 
        
