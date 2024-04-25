@@ -44,6 +44,11 @@ namespace MeditationTimerApp
         {
             writeTimeToFile();
             timer.Stop();
+            string timeMeditated = timerLabel.Text;
+            string message = $"Session over\n you meditated for {timeMeditated} seconds";
+            string title = "meditation over";
+            MessageBox.Show(message, title);
+
             hours = 0;
             minutes = 0;
             timerLabel.Text = "00:00";
