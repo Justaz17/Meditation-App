@@ -9,8 +9,8 @@ A WinForms application that allows users to meditate for a set amount of time. T
 
 ## Requirements
 
-- [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
-- [Visual Studio 2022: Community Edition](https://visualstudio.microsoft.com/vs/community/)
+- [C#](https://docs.microsoft.com/en-us/dotnet/csharp/ "C#") 9.0: The programming language used to develop the application.
+- [Visual Studio 2022: Community Edition](https://visualstudio.microsoft.com/vs/community/ "Visual Studio 2022: Community Edition"): The integrated development environment used to develop the application.
 
 ## Use cases
 
