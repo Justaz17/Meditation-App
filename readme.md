@@ -9,7 +9,11 @@ By Justas Jokubauskas and Adam Carr
 
 ## Use cases
 
-![Screen1](image/readme/screen1.png)
+![Use-Case](image/readme/use-case.png)
+> Use Case Diagram
+
+![Screen Shot 1](image/readme/screen1.png)
+> Screen Shot 1
 
 ### Justas
 
