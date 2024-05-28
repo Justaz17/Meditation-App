@@ -57,7 +57,6 @@
             timerLabel.Size = new Size(363, 135);
             timerLabel.TabIndex = 0;
             timerLabel.Text = "00:00";
-            timerLabel.Click += label1_Click;
             // 
             // selectBox
             // 
@@ -250,7 +249,6 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "CountdownTimer";
             Text = "Countdown";
-            Load += Question5pt2_Load;
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();

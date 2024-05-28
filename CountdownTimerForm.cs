@@ -66,16 +66,6 @@ namespace MeditationTimerApp
             }));
         }
 
-        private void Question5pt2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void stopBtn_Click(object sender, EventArgs e)
         {
             timer.Stop();
@@ -150,10 +140,6 @@ namespace MeditationTimerApp
             timerLabel.BackColor = Color.Gray;
         }
 
-        private void countdownTime_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
