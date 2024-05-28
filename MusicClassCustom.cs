@@ -8,9 +8,14 @@ using System.Media;
 namespace MeditationTimerApp
 {
     using System.Media;
-
+    /// <summary>
+    ///  A class that plays music
+    /// </summary>
     public class MySoundPlayer
     {
+        /// <summary>
+        /// The sound player object
+        /// </summary>
         private readonly SoundPlayer soundPlayer;
 
         public MySoundPlayer()
@@ -18,6 +23,10 @@ namespace MeditationTimerApp
             soundPlayer = new SoundPlayer();
         }
 
+        /// <summary>
+        /// Plays music
+        /// </summary>
+        /// <param name="filepath">The path to the music file</param>
         public void PlayMusic(string filepath)
         {
             soundPlayer.SoundLocation = filepath;
