@@ -1,6 +1,11 @@
 # Mediation App
 
-By Justas Jokubauskas and Adam Carr
+*By [Justas Jokubauskas](https://github.com/Justaz17 "Justas Jokubauskas") and [Adam Carr](https://github.com/realadamcarr "Adam Carr")*
+
+A WinForms application that allows users to meditate for a set amount of time. The user can select the amount of time they want to meditate for and the app will play a sound when the time is up. The user can also select a background theme and a sound to play when the time is up.
+
+![Screen Shot 1](image/readme/screen1.png)
+> Screen Shot 1
 
 ## Requirements
 
@@ -11,9 +16,6 @@ By Justas Jokubauskas and Adam Carr
 
 ![Use-Case](image/readme/use-case.png)
 > Use Case Diagram
-
-![Screen Shot 1](image/readme/screen1.png)
-> Screen Shot 1
 
 ### Justas
 
