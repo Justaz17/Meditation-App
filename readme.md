@@ -4,6 +4,8 @@ By Justas Jokubauskas and Adam Carr
 
 ## Use cases
 
+![Screen1](image/readme/screen1.png)
+
 ### Justas
 
 1. User can start and stop timer && plays music.
@@ -19,3 +21,4 @@ By Justas Jokubauskas and Adam Carr
 3. User can select between different background Themes.
 4. When Time is up, user can see a pop up message for session time.
 5. timer changes when the countdown has stopped
+
